@@ -21,22 +21,22 @@ body{
     grid-template-rows: repeat(2, 1fr);
 }
 
-.green{
+#green{
     background-color: rgba(0, 128, 0, 0.6);
     border-radius: 100% 0 0 0;
 }
 
-.red{
+#red{
     background-color: rgba(255, 0, 0, 0.6);
     border-radius: 0 100% 0 0;
 }
 
-.yellow{
+#yellow{
     background-color: rgba(255, 255, 0, 0.6);
     border-radius: 0 0 0 100%;
 }
 
-.blue{
+#blue{
     background-color: rgba(0, 0, 255, 0.6);
     border-radius: 0 0 100% 0;
 }
@@ -49,7 +49,7 @@ body{
     font-family: Arial, Helvetica, sans-serif; 
     border: 0;
     outline: 0;
-    border: 3px solid black;
+    box-shadow: 0px 0px 30px -8px rgba(0,0,0,0.75);
 }
 
 #btn-start:hover{
