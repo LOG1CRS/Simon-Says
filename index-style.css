@@ -1,3 +1,5 @@
+/* ----- Global CSS ----- */
+
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +16,8 @@ body{
     background-color: rgb(219, 219, 219);
 }
 
+/* ----- Scoreboard ----- */
+
 .scoreboard{
     position: absolute;
     display: grid;
@@ -26,7 +30,7 @@ body{
     border-radius: 15px;
     background-color: white;
     opacity: 0;
-    box-shadow: 0px 0px 20px -8px rgba(0,0,0,0.75);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .title{
@@ -50,6 +54,8 @@ body{
     justify-content: center;
     font-size: 20px;
 }
+
+/* ----- Gameboard ----- */
 
 .gameboard{
     width: 600px;
@@ -95,6 +101,8 @@ body{
     background-color: blue;
 }
 
+/* ----- Button start ----- */
+
 #btn-start{
     height: 120px;
     width: 670px;
@@ -113,6 +121,7 @@ body{
     background-color: rgb(197, 197, 197);
 }
 
+/* ----- Mobile CSS ----- */
 
 @media only screen and (max-width: 600px) {
 

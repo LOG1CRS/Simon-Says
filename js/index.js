@@ -1,3 +1,10 @@
+/**
+ * @description Simon says system
+ * @author LOG1C_RS 
+ */
+
+
+//Global elements of HTML
 const startButton = document.getElementById('btn-start');
 const scoreaboard = document.getElementById('scoreboard');
 const round = document.getElementById('round');
@@ -7,6 +14,10 @@ const yellow = document.getElementById('yellow');
 const blue = document.getElementById('blue');
 const LAST_LEVEL = 12;
 
+
+/**
+ * Class Game, contains all the functions to allow the game to work
+ */
 class Game{
     constructor(){
         this.initialize()
@@ -14,6 +25,7 @@ class Game{
         this.nextLevel()
     }
 
+    //Start game 
     initialize(){
         this.toggleBtnStart()
         this.level = 1;
@@ -28,6 +40,7 @@ class Game{
         round.innerHTML = this.level;
     }
 
+    //Hide and show the starbutton and the scoreboard
     toggleBtnStart(){
         if(startButton.style.display == 'none'){
             startButton.style.display = 'block'
@@ -38,10 +51,12 @@ class Game{
         }
     }
 
+    //Get sequence with values between 0 and 3 
     generateSequence(){
         this.sequence = new Array(12).fill(0).map(n => Math.floor(Math.random() * 4))
     }
 
+    //Pass to next level, sublevel will go from 0 to the number of repetitions of each round.
     nextLevel(){
         this.sublevel = 0
         this.illuminateSequence()
@@ -75,6 +90,7 @@ class Game{
         }
     }
 
+    //Iteration of each level
     illuminateSequence(){
         for(var i = 0; i<this.level; i++){
             const color = this.numToColor(this.sequence[i])
@@ -82,6 +98,7 @@ class Game{
         }
     }
 
+    //illuminate the panels
     illuminateColor(color){
         this.buttons[color].classList.add('light')
         setTimeout(() => this.turnOffColor(color), 500)
@@ -105,6 +122,7 @@ class Game{
         this.buttons.blue.removeEventListener('click', this.chooseColor)
     }
 
+    //verify user selection
     chooseColor(ev){
         const nameColor = ev.target.dataset.color
         const numColor = this.colorToNum(nameColor)
@@ -142,6 +160,9 @@ class Game{
     }
 }
 
+/**
+ * Call the class Game when the user press the buttom
+ */
 function startGame(){
     window.game = new Game()
 }
