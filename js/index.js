@@ -1,4 +1,6 @@
 const startButton = document.getElementById('btn-start');
+const scoreaboard = document.getElementById('scoreboard');
+const round = document.getElementById('round');
 const green = document.getElementById('green');
 const red = document.getElementById('red');
 const yellow = document.getElementById('yellow');
@@ -23,13 +25,16 @@ class Game{
         }
 
         this.chooseColor = this.chooseColor.bind(this)
+        round.innerHTML = this.level;
     }
 
     toggleBtnStart(){
         if(startButton.style.display == 'none'){
             startButton.style.display = 'block'
+            scoreaboard.style.opacity = 0
         }else{
             startButton.style.display = 'none'
+            scoreaboard.style.opacity = 1
         }
     }
 
@@ -108,6 +113,7 @@ class Game{
             this.sublevel++
             if(this.sublevel === this.level){
                 this.level++
+                round.innerHTML = this.level;
                 this.deleteClickEvents()
                 if(this.level === (LAST_LEVEL + 1)){
                     this.winTheGame()
