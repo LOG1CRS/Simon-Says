@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/simon-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="index-style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="src/simon-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index-style.css" />
     <title>Simon Says</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="scoreboard" class="scoreboard">
-        <div class="title">
-            <p>Scoreboard</p>
-        </div>
-        <div class="current-round">
-            <p>Current round: </p><p id="round"></p>
-        </div>
-        <div class="last-round">
-            <p>Finish round: 12</p>
-        </div>
+      <div class="title">
+        <p>Scoreboard</p>
+      </div>
+      <div class="current-round">
+        <p>Current round:</p>
+        <p id="round"></p>
+      </div>
+      <div class="last-round">
+        <p>Finish round: 12</p>
+      </div>
     </div>
     <div class="gameboard">
-        <div id="green" class="green" data-color="green"></div>
-        <div id="red" class="red" data-color="red"></div>
-        <div id="yellow" class="yellow" data-color="yellow"></div>
-        <div id="blue" class="blue" data-color="blue"></div>
+      <div id="green" class="green" data-color="green"></div>
+      <div id="red" class="red" data-color="red"></div>
+      <div id="yellow" class="yellow" data-color="yellow"></div>
+      <div id="blue" class="blue" data-color="blue"></div>
     </div>
     <button id="btn-start" onclick="startGame()">Start Game!</button>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>
