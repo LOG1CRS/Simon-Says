@@ -1,155 +1,154 @@
 /* ----- Global CSS ----- */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(219, 219, 219);
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(219, 219, 219);
 }
 
 /* ----- Scoreboard ----- */
 
-.scoreboard{
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    top: 15px;
-    right: 15px;
-    width: 200px;
-    height: 150px;
-    border-radius: 15px;
-    background-color: white;
-    opacity: 0;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+.scoreboard {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  top: 15px;
+  right: 15px;
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  background-color: white;
+  opacity: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.title{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    text-decoration: underline;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  text-decoration: underline;
 }
 
-.current-round{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+.current-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 
-.last-round{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+.last-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }
 
 /* ----- Gameboard ----- */
 
-.gameboard{
-    width: 600px;
-    height: 600px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+.gameboard {
+  width: 600px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
-.green{
-    background-color: rgb(0, 150, 0);
-    border-radius: 100% 0 0 0;
+.green {
+  background-color: rgb(0, 150, 0);
+  border-radius: 100% 0 0 0;
 }
 
-.green.light{
-    background-color: rgb(0, 255, 0);
+.green.light {
+  background-color: rgb(0, 255, 0);
 }
 
-.red{
-    background-color: rgb(150, 0, 0);
-    border-radius: 0 100% 0 0;
+.red {
+  background-color: rgb(150, 0, 0);
+  border-radius: 0 100% 0 0;
 }
 
-.red.light{
-    background-color: red;
+.red.light {
+  background-color: red;
 }
 
-.yellow{
-    background-color: rgb(150, 150, 0);
-    border-radius: 0 0 0 100%;
+.yellow {
+  background-color: rgb(150, 150, 0);
+  border-radius: 0 0 0 100%;
 }
 
-.yellow.light{
-    background-color: yellow;
+.yellow.light {
+  background-color: yellow;
 }
 
-.blue{
-    background-color: rgb(0, 0, 150);
-    border-radius: 0 0 100% 0;
+.blue {
+  background-color: rgb(0, 0, 150);
+  border-radius: 0 0 100% 0;
 }
 
-.blue.light{
-    background-color: blue;
+.blue.light {
+  background-color: blue;
 }
 
 /* ----- Button start ----- */
 
-#btn-start{
-    height: 120px;
-    width: 670px;
-    position: absolute;
-    font-size: 60px;
-    border: 0;
-    outline: 0;
-    box-shadow: 0px 0px 30px -8px rgba(0,0,0,0.75);
+#btn-start {
+  height: 120px;
+  width: 670px;
+  position: absolute;
+  font-size: 60px;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px 0px 30px -8px rgba(0, 0, 0, 0.75);
 }
 
-#btn-start:hover{
-    background-color: rgb(223, 223, 223);
+#btn-start:hover {
+  background-color: rgb(223, 223, 223);
 }
 
-#btn-start:active{
-    background-color: rgb(197, 197, 197);
+#btn-start:active {
+  background-color: rgb(197, 197, 197);
 }
 
 /* ----- Mobile CSS ----- */
 
 @media only screen and (max-width: 600px) {
-
-    .scoreboard{
-        width: 170px;
-        height: 120px;
-    }
-
-    .title{
-        font-size: 22px;
-    }
-    
-    .current-round{
-        font-size: 18px;
-    }
-    
-    .last-round{
-        font-size: 18px;
-    }
-
-    .gameboard{
-        width: 350px;
-        height: 350px;
-    }
-
-    #btn-start{
-        height: 100px;
-        width: 300px;
-        font-size: 40px;
-    }
+  .scoreboard {
+    width: 170px;
+    height: 120px;
   }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .current-round {
+    font-size: 18px;
+  }
+
+  .last-round {
+    font-size: 18px;
+  }
+
+  .gameboard {
+    width: 350px;
+    height: 350px;
+  }
+
+  #btn-start {
+    height: 100px;
+    width: 300px;
+    font-size: 40px;
+  }
+}
